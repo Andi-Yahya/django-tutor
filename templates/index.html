@@ -1,15 +1,19 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selamat Datang | Tuan & Nyonya</title>
+    <title>{{judul}}</title>
 </head>
 <body>
-    <h1>Selamat Datang Di Website kami | ini adalah Home</h1>
+    <h1>{{subjudul}}</h1>
     <p>website ini dibuat menggunakan django</p>
+    {% comment %} <img style='width: 100%;' src="{{img}}" alt=""> {% endcomment %}
+    <img style='width :100%' src="{%static img%}" alt="">
     <ul>
+        <li><a href="..">Home</a></li>
         <li><a href="/blog">blog</a></li>
         <li><a href="/about">about</a></li>
         <li><a href="/blog/recent/">recent</a></li> <! -- perlu diingat bahwa url ini adalah anak atau sub url dari app blog sehingga aturan link pada href html nya adalah '/blog/recent' atau "/blog/recent/" -->
