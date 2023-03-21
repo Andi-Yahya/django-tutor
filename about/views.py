@@ -7,7 +7,7 @@ def index(request):
         'nama':'Andi Yahya',
         'jurusan':'Teknik Informatika'
     }
-    return render(request,"about/index.html",context)  #pastikan tanda petik harus sama dengan tanda petik yang ada di library urls bagian urlPatterns di dalam parameter dari Include() nya
+    return render(request,"about/index.html",context)  #pastikan tanda petik harus sama dengan tanda petik yang ada di library urls bagian urlPatterns di dalam parameter dari  Include() nya
 
 
 def me(request):
