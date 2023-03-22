@@ -1,0 +1,12 @@
+h1{
+    color: #06f;
+}
+
+nav ul {
+    background-color: #06f;
+}
+
+
+nav a:hover{
+    background-color:  #0f9910;
+}

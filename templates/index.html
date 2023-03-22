@@ -6,18 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{judul}}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+    <link rel="stylesheet" href="{% static app_css%}">
+     <link rel="stylesheet" href="{% static app_css2%}">  <!-- karakteristik css ini adalah akan menimpa css style sebelumnya jika ditemukan double style -->
+    
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="..">Home</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/blog/recent/">Recent</a></li> <! -- perlu diingat bahwa url ini adalah anak atau sub url dari app blog sehingga aturan link pada href html nya adalah '/blog/recent' atau "/blog/recent/" -->
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
     <h1>{{subjudul}}</h1>
     <p>website ini dibuat menggunakan django</p>
     {% comment %} <img style='width: 100%;' src="{{img}}" alt=""> {% endcomment %}
-    <img style='width :100%' src="{%static img%}" alt="">
-    <ul>
-        <li><a href="..">Home</a></li>
-        <li><a href="/blog">blog</a></li>
-        <li><a href="/about">about</a></li>
-        <li><a href="/blog/recent/">recent</a></li> <! -- perlu diingat bahwa url ini adalah anak atau sub url dari app blog sehingga aturan link pada href html nya adalah '/blog/recent' atau "/blog/recent/" -->
-        <li><a href="/contact">Contact</a></li>
-    </ul>
+    <img id='banner' src="{%static img%}" alt="">
+    
 </body>
 </html>
