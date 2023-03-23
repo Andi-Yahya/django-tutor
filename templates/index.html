@@ -9,22 +9,51 @@
     <link rel="stylesheet" href="{% static 'css/styles.css'%}">
     <link rel="stylesheet" href="{% static app_css%}">
      <link rel="stylesheet" href="{% static app_css2%}">  <!-- karakteristik css ini adalah akan menimpa css style sebelumnya jika ditemukan double style -->
+    <link rel="stylesheet" href="{%static 'vendor/bootstrap/bootstrap.css'%}">
     
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="..">Home</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/blog/recent/">Recent</a></li> <! -- perlu diingat bahwa url ini adalah anak atau sub url dari app blog sehingga aturan link pada href html nya adalah '/blog/recent' atau "/blog/recent/" -->
-            <li><a href="/contact">Contact</a></li>
-        </ul>
-    </nav>
-    <h1>{{subjudul}}</h1>
-    <p>website ini dibuat menggunakan django</p>
-    {% comment %} <img style='width: 100%;' src="{{img}}" alt=""> {% endcomment %}
-    <img id='banner' src="{%static img%}" alt="">
-    
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark bg-body-tertiary">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img style="height: 30px;" src="{%static 'img/logo.png'%}" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                </ul>
+            </div>
+            </div>
+        </nav>    
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="..">Home</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/blog/recent/">Recent</a></li> <! -- perlu diingat bahwa url ini adalah anak atau sub url dari app blog sehingga aturan link pada href html nya adalah '/blog/recent' atau "/blog/recent/" -->
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>{{subjudul}}</h1>
+        <p>website ini dibuat menggunakan django</p>
+        {% comment %} <img style='width: 100%;' src="{{img}}" alt=""> {% endcomment %}
+        <img id='banner' src="{%static img%}" alt="">
+
+
+        <script src="vendor/jquery/jquery.js"></script>
+
+        <script src="vendor/popper/popper.js"></script>
+
+        <script src="{%static 'vendor/bootstrap/bootstrap.js' %}"></script>
+    </div>
 </body>
 </html>
