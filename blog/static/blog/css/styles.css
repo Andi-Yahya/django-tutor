@@ -9,4 +9,5 @@ nav ul {
 
 nav a:hover{
     background-color:  #0f9910;
+    text-decoration: none;
 }

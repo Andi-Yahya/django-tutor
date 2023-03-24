@@ -6,6 +6,7 @@
 h1{
     color: #666;
     font-family: Arial;
+    
 }
 
 nav ul {
@@ -27,8 +28,19 @@ nav a{
     padding: 10px 10px;
 }
 
+/* 
+nav a:hover{
+    background-color:  #0f9910;
+    text-decoration: none;
+} */
 
 nav a:hover{
     background-color:  #0f9910;
+    text-decoration: none;
+}
+
+
+.jumbotron{
+    background-image: url('/static/img/mainHeader.jpg');
 }
 
